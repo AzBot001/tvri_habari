@@ -1,5 +1,7 @@
 <?php
 
+include 'app/controller/reporter/function_naskahghi.php';
+include 'app/flash_message.php';
 
 if (isset($_POST['simpanghi'])) {
     $judul = $_POST['judul'];

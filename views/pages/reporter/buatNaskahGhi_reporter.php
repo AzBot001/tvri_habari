@@ -57,10 +57,14 @@ include 'app/controller/reporter/post_naskahghi.php';
                                             <label>Kategori Berita</label>
                                             <select class="form-control" name="kategori">
                                                 <option hidden>--Pilih Kategori--</option>
-                                                <option value="Kesehatan">Kesehatan</option>
-                                                <option value="Ekonomi">Ekonomi</option>
-                                                <option value="Sosial">Sosial</option>
-                                                <option value="Hukum">Hukum</option>
+                                                <?php
+                                                    $query = $mysqli->query("SELECT * FROM kategori");
+                                                    while ($data = $query->fetch_assoc()){
+                                                        ?>
+                                                            <option value="<?= $data['id_kategori']?>"><?= $data['nama_kategori']?></option>
+                                                        <?php
+                                                    }
+                                                ?>
                                             </select>
                                         </div>
                                     </div>

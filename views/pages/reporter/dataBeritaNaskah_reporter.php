@@ -1,3 +1,4 @@
+<?php include 'app/controller/reporter/post_naskahghi.php;'?>
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -35,8 +36,8 @@
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-four-tabContent">
                                 <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
+                                    <table id="dataTable" class="table">
+                                        <thead class="thead-light">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
@@ -49,26 +50,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>7503061001170005</td>
-                                                <td>1302100901880001</td>
-                                                <td>ARIF FAREZA</td>
-                                                <td>09 Januari 1988</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Bolongga</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>7503061406120004</td>
-                                                <td>750306251187002</td>
-                                                <td>ABD RAHMAN MOKO</td>
-                                                <td>25 November 1987</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Pentadio</td>
-                                            </tr>
+                                           <?php tampil_naskah_ghi($mysqli); ?>
                                         </tbody>
                                     </table>
                                 </div>

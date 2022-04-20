@@ -70,7 +70,7 @@ include 'app/controller/admin/post_kategori.php';
 
 <!-- ----------------------modal_input---------------------- -->
 <div class="modal fade" id="inputkategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form action="" method="post">
                 <div class="modal-header">
