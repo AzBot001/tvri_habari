@@ -1,4 +1,7 @@
-<?php include 'app/controller/reporter/post_naskahghi.php;'?>
+<?php 
+include 'app/controller/reporter/post_naskah.php';
+include 'app/controller/reporter/post_naskahghi.php';
+?>
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -36,7 +39,19 @@
                         <div class="card-body">
                             <div class="tab-content" id="custom-tabs-four-tabContent">
                                 <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
-                                    <table id="dataTable" class="table">
+                                <?php
+                        if (isset($_SESSION['msg_simpan_ghi'])) {
+                        ?>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <span class="fas fa-check fe-16 mr-2"></span> <?= flash('msg_simpan_ghi'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <?php
+                        }
+                        ?>  
+                                <table id="dataTable" class="table">
                                         <thead class="thead-light">
                                             <tr>
                                                 <th>No</th>

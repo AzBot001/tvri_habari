@@ -30,6 +30,7 @@ if (isset($_POST['simpanghi'])) {
 ?>
    
     <?php
+    flash("msg_simpan_ghi","Data Berhasi Disimpan");
 }
 
     ?>
