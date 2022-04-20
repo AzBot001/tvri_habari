@@ -9,7 +9,7 @@ include 'app/controller/reporter/post_naskahghi.php';
                 <i class="fas fa-eye fa-md  mr-2"></i>
                 Lihat Refrensi Naskah
             </div>
-            <form action="dataBeritaNaskah_reporter" method="post">
+            <form action="" method="post">
                 <div class="row">
                     <div class="col-md-12">
                         <!-- general form elements disabled -->
