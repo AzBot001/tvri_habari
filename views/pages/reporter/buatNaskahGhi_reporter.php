@@ -1,4 +1,3 @@
-
 <?php
 include 'app/controller/reporter/post_naskahghi.php';
 ?>
@@ -11,20 +10,21 @@ include 'app/controller/reporter/post_naskahghi.php';
                 Lihat Refrensi Naskah
             </div>
             <form action="" method="post">
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- general form elements disabled -->
-                    <div class="card card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">NASKAH GORONTALO HARI INI</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                          
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- general form elements disabled -->
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">NASKAH GORONTALO HARI INI</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <!-- text input -->
                                         <div class="form-group">
+                                            <input type="hidden" name="jenis" value="ghi">
                                             <label>Judul</label>
                                             <input name="judul" type="text" class="form-control" placeholder="Masukkan Judul Berita">
                                         </div>
@@ -81,21 +81,21 @@ include 'app/controller/reporter/post_naskahghi.php';
                                             </select>
                                         </div>
                                     </div>
-                                </div>    
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">ISI BERITA</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">ISI BERITA</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <!-- textarea -->
                                         <div class="form-group">
                                             <label>Lead Berita</label>
-                                            <textarea name="lead" class="form-control"  rows="10" placeholder="Masukkan Lead Berita"></textarea>
+                                            <textarea name="lead" class="form-control" rows="10" placeholder="Masukkan Lead Berita"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ include 'app/controller/reporter/post_naskahghi.php';
                                         <!-- textarea -->
                                         <div class="form-group">
                                             <label>Narasi Berita</label>
-                                            <textarea name="narasi"  class="form-control" rows="10" placeholder="Masukkan Narasi Berita"></textarea>
+                                            <textarea name="narasi" class="form-control" rows="10" placeholder="Masukkan Narasi Berita"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -129,18 +129,18 @@ include 'app/controller/reporter/post_naskahghi.php';
                                             </div>
                                         </div>
                                         <button type="button" class="btn btn-danger remove"><i class="fas fa-trash"></i> SoundUp</button>
-                                       <hr>
-                                    </div>          
-                                </div>     
+                                        <hr>
+                                    </div>
+                                </div>
                                 <div class="btn-group float-right">
                                     <button type="submit" name="simpanghi" class="btn btn-success">Simpan</button>
                                 </div>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card-body -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
                 </div>
-            </div>
             </form>
         </div>
     </section>

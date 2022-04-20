@@ -14,17 +14,17 @@ if (isset($_POST['simpanghi'])) {
     $narasi = $_POST['narasi'];
     $su = $_POST['su'];
     $narasi_soundup = $_POST['narasi_soundup'];
+    $jenis = $_POST['jenis'];
     // print_r($narasi_soundup);
     $jumlah_su = count($su) - 1;
 
-    $query = $mysqli->query("INSERT INTO naskah VALUES ('','$judul','$lokasi','$kameramen','$tgl_berita','$kategori','$bobot','$lead','$narasi')");
+    $query = $mysqli->query("INSERT INTO naskah VALUES ('','$judul','$lokasi','$kameramen','$tgl_berita','$kategori','$bobot','$lead','$narasi','$jenis')");
 
     $last_id = $mysqli->insert_id;
 
-    for ($i = 0; $i < $jumlah_su; $i++){
+    for ($i = 0; $i < $jumlah_su; $i++) {
 
         $query_detail = $mysqli->query("INSERT INTO detail_naskah VALUES ('','$last_id','$su[$i]','$narasi_soundup[$i]')");
-
     }
 
 ?>
