@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Apr 2022 pada 09.17
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.2.34
+-- Waktu pembuatan: 20 Apr 2022 pada 17.42
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,6 +41,27 @@ CREATE TABLE `detail_naskah` (
 INSERT INTO `detail_naskah` (`id_detail`, `id_naskah`, `su`, `naskah_su`) VALUES
 (10, 9, 'sds', ''),
 (11, 9, 'sdsdsd', 'fsdgsdgsdgdsgsdg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `nama_kategori` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(2, 'Kesehatan'),
+(3, 'Hukum'),
+(4, 'Bencana'),
+(5, 'Ekonomi');
 
 -- --------------------------------------------------------
 
@@ -84,7 +105,32 @@ CREATE TABLE `naskah_default` (
 --
 
 INSERT INTO `naskah_default` (`id_naskahdefault`, `judul_naskah`, `narasi`) VALUES
-(3, 'Ad cupidatat dolorem', '');
+(3, 'Bridging Iklan', '<p>Pemirsa nantikan sesaat lagi berita hari ini sekian dan salam</p>'),
+(4, 'Pengantar Sulampa', '<p>Pemirsa saat ini kita beralih ke pengantar sulampa</p>'),
+(5, 'Bridging Ramadhan', '<p>Selamat berbuka ramdahan. marhaban tiba ya ramadhan');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `program_cu`
+--
+
+CREATE TABLE `program_cu` (
+  `id_program_cu` int(11) NOT NULL,
+  `nama_program_cu` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `program_cu`
+--
+
+INSERT INTO `program_cu` (`id_program_cu`, `nama_program_cu`) VALUES
+(1, 'Mokawali Lipu'),
+(2, 'Dunia Olahraga'),
+(3, 'Gorontalo Menyapa'),
+(4, 'Inspirasi Indonesia'),
+(5, 'Lintas Negri'),
+(6, 'Tatonu');
 
 --
 -- Indexes for dumped tables
@@ -95,6 +141,12 @@ INSERT INTO `naskah_default` (`id_naskahdefault`, `judul_naskah`, `narasi`) VALU
 --
 ALTER TABLE `detail_naskah`
   ADD PRIMARY KEY (`id_detail`);
+
+--
+-- Indeks untuk tabel `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`id_kategori`);
 
 --
 -- Indeks untuk tabel `naskah`
@@ -109,6 +161,12 @@ ALTER TABLE `naskah_default`
   ADD PRIMARY KEY (`id_naskahdefault`);
 
 --
+-- Indeks untuk tabel `program_cu`
+--
+ALTER TABLE `program_cu`
+  ADD PRIMARY KEY (`id_program_cu`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -117,6 +175,12 @@ ALTER TABLE `naskah_default`
 --
 ALTER TABLE `detail_naskah`
   MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `naskah`
@@ -128,7 +192,13 @@ ALTER TABLE `naskah`
 -- AUTO_INCREMENT untuk tabel `naskah_default`
 --
 ALTER TABLE `naskah_default`
-  MODIFY `id_naskahdefault` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_naskahdefault` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT untuk tabel `program_cu`
+--
+ALTER TABLE `program_cu`
+  MODIFY `id_program_cu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
