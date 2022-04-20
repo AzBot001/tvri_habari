@@ -25,6 +25,8 @@ include 'app/controller/reporter/post_naskahghi.php';
                                         <!-- text input -->
                                         <div class="form-group">
                                             <input type="hidden" name="jenis" value="ghi">
+                                            <input type="hidden" name="sts_periksa" value="0">
+                                            <input type="hidden" name="sts_edit" value="0">
                                             <label>Judul</label>
                                             <input name="judul" type="text" class="form-control" placeholder="Masukkan Judul Berita">
                                         </div>
