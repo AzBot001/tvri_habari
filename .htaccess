@@ -1,0 +1,77 @@
+RewriteEngine On
+RewriteBase /tvri_habari/
+Options +FollowSymLinks
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^index$ index.php
+RewriteRule ^beranda_reporter$ index.php?t_reporter=beranda_reporter
+RewriteRule ^buatNaskahGhi_reporter$ index.php?t_reporter=buatNaskahGhi_reporter
+RewriteRule ^buatNaskahGns_reporter$ index.php?t_reporter=buatNaskahGns_reporter
+RewriteRule ^buatNaskahHabari_reporter$ index.php?t_reporter=buatNaskahHabari_reporter
+RewriteRule ^buatNaskahSulampa_reporter$ index.php?t_reporter=buatNaskahSulampa_reporter
+RewriteRule ^buatNaskahDialog_reporter$ index.php?t_reporter=buatNaskahDialog_reporter
+RewriteRule ^buatNaskahLc_reporter$ index.php?t_reporter=buatNaskahLc_reporter
+
+RewriteRule ^dataBeritaNaskah_reporter$ index.php?t_reporter=dataBeritaNaskah_reporter
+RewriteRule ^dataBeritaRundown_reporter$ index.php?t_reporter=dataBeritaRundown_reporter
+RewriteRule ^dataBeritaLead_reporter$ index.php?t_reporter=dataBeritaLead_reporter
+
+
+
+
+RewriteRule ^userdesk$ userdesk.php
+RewriteRule ^beranda_userdesk$ userdesk.php?t_userdesk=beranda_userdesk
+RewriteRule ^buatNaskahGhi_userdesk$ userdesk.php?t_userdesk=buatNaskahGhi_userdesk
+RewriteRule ^buatNaskahGns_userdesk$ userdesk.php?t_userdesk=buatNaskahGns_userdesk
+RewriteRule ^buatNaskahHabari_userdesk$ userdesk.php?t_userdesk=buatNaskahHabari_userdesk
+RewriteRule ^buatNaskahSulampa_userdesk$ userdesk.php?t_userdesk=buatNaskahSulampa_userdesk
+RewriteRule ^buatNaskahDialog_userdesk$ userdesk.php?t_userdesk=buatNaskahDialog_userdesk
+RewriteRule ^buatNaskahLc_userdesk$ userdesk.php?t_userdesk=buatNaskahLc_userdesk
+
+RewriteRule ^urutberitaGhi_userdesk$ userdesk.php?t_userdesk=urutberitaGhi_userdesk
+RewriteRule ^urutberitaGns_userdesk$ userdesk.php?t_userdesk=urutberitaGns_userdesk
+RewriteRule ^urutberitaHabari_userdesk$ userdesk.php?t_userdesk=urutberitaHabari_userdesk
+
+RewriteRule ^dataBeritaNaskah_userdesk$ userdesk.php?t_userdesk=dataBeritaNaskah_userdesk
+RewriteRule ^dataBeritaRundown_userdesk$ userdesk.php?t_userdesk=dataBeritaRundown_userdesk
+RewriteRule ^dataBeritaLead_userdesk$ userdesk.php?t_userdesk=dataBeritaLead_userdesk
+
+
+
+RewriteRule ^editor$ editor.php
+RewriteRule ^beranda_editor$ editor.php?t_editor=beranda_editor
+RewriteRule ^dataBeritaNaskah_editor$ editor.php?t_editor=dataBeritaNaskah_editor
+RewriteRule ^dataBeritaRundown_editor$ editor.php?t_editor=dataBeritaRundown_editor
+RewriteRule ^dataBeritaLead_editor$ editor.php?t_editor=dataBeritaLead_editor
+RewriteRule ^updateVideo_editor$ editor.php?t_editor=updateVideo_editor
+
+
+RewriteRule ^userbiasa$ userbiasa.php
+RewriteRule ^beranda_userbiasa$ userbiasa.php?t_userbiasa=beranda_userbiasa
+RewriteRule ^dataBeritaNaskah_userbiasa$ userbiasa.php?t_userbiasa=dataBeritaNaskah_userbiasa
+RewriteRule ^dataBeritaRundown_userbiasa$ userbiasa.php?t_userbiasa=dataBeritaRundown_userbiasa
+RewriteRule ^dataBeritaLead_userbiasa$ userbiasa.php?t_userbiasa=dataBeritaLead_userbiasa
+
+
+
+RewriteRule ^admin$ admin.php
+RewriteRule ^beranda_admin$ admin.php?t_admin=beranda_admin
+RewriteRule ^dataBeritaNaskah_admin$ admin.php?t_admin=dataBeritaNaskah_admin
+RewriteRule ^dataBeritaRundown_admin$ admin.php?t_admin=dataBeritaRundown_admin
+RewriteRule ^dataBeritaLead_admin$ admin.php?t_admin=dataBeritaLead_admin
+RewriteRule ^verivikasiUser_admin$ admin.php?t_admin=verivikasiUser_admin
+RewriteRule ^formatTimredaksi_admin$ admin.php?t_admin=formatTimredaksi_admin
+RewriteRule ^naskahDefault_admin$ admin.php?t_admin=naskahDefault_admin
+RewriteRule ^editNaskah_admin$ admin.php?t_admin=editNaskah_admin
+
+
+<IfModule mod_headers.c>
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+<Files env.php>
+deny from all
+</Files>
+Options All -Indexes
