@@ -56,30 +56,30 @@ function tampil_naskah_default($mysqli)
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <form action="" method="post">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Edit - <?= $data['judul_naskah'] ?></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label>Judul Naskah</label>
-                                    <input type="hidden" name="id" value="<?= $data['id_naskahdefault'] ?>">
-                                    <input type="text" value="<?= $data['judul_naskah'] ?>" name="judul_naskah" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Narasi</label>
-                                    <textarea id="summernote_naskah_default_edit" name="narasi_default" cols="30" rows="10" class="form-control"><?= $data['narasi'] ?></textarea>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit - <?= $data['judul_naskah'] ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Judul Naskah</label>
+                                        <input type="hidden" name="id" value="<?= $data['id_naskahdefault'] ?>">
+                                        <input type="text" value="<?= $data['judul_naskah'] ?>" name="judul_naskah" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Narasi</label>
+                                        <textarea id="summernote_naskah_default_edit" name="narasi_default" cols="30" rows="10" class="form-control"><?= $data['narasi'] ?></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="edit_naskah_default" class="btn btn-success btn-block"><i class="fas fa-save"></i> Simpan</button>
-                    </div>
+                        <div class="modal-footer">
+                            <button type="submit" name="edit_naskah_default" class="btn btn-success btn-block"><i class="fas fa-save"></i> Simpan</button>
+                        </div>
 
                     </form>
                 </div>

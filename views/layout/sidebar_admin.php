@@ -51,14 +51,37 @@
                           </p>
                       </a>
                   </li>
-                  <li class="nav-item">
-                      <a href="<?= $base_url ?>naskahDefault_admin" class="nav-link">
-                          <i class="nav-icon fa fa-file text-white"></i>
-                          <p class="text-white">
-                              Naskah Default
+
+                  <li class="nav-item has-treeview">
+                      <a href="" class="nav-link">
+                          <i class="nav-icon fas fa-cog"></i>
+                          <p>
+                              Data Master
+                              <i class="fas fa-angle-left right"></i>
                           </p>
                       </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="<?= $base_url ?>naskahDefault_admin" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Data Naskah Default</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="<?= $base_url ?>kategori_admin" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Data Kategori</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="<?= $base_url ?>cu_admin" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Program Current Affairs</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
+
                   <li class="nav-item has-treeview">
                       <a href="<?= $base_url ?>dataBeritaNaskah_admin" class="nav-link">
                           <i class="nav-icon fas fa-newspaper"></i>
@@ -85,6 +108,7 @@
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Data Lead</p>
                               </a>
+                          </li>
                       </ul>
                   </li>
               </ul>

@@ -65,6 +65,8 @@ RewriteRule ^verivikasiUser_admin$ admin.php?t_admin=verivikasiUser_admin
 RewriteRule ^formatTimredaksi_admin$ admin.php?t_admin=formatTimredaksi_admin
 RewriteRule ^naskahDefault_admin$ admin.php?t_admin=naskahDefault_admin
 RewriteRule ^editNaskah_admin$ admin.php?t_admin=editNaskah_admin
+RewriteRule ^kategori_admin$ admin.php?t_admin=kategori_admin
+RewriteRule ^cu_admin$ admin.php?t_admin=cu_admin
 
 
 <IfModule mod_headers.c>

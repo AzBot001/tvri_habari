@@ -25,6 +25,12 @@ if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'beranda_admin') {
 } else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'editNaskah_admin') {
     $title = 'edit Naskah';
     $icon = 'fas fa-edit';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'kategori_admin') {
+    $title = 'kategori_admin';
+    $icon = 'fas fa-edit';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'cu_admin') {
+    $title = 'Current Affairs';
+    $icon = 'fas fa-edit';
 }
 
 
@@ -48,6 +54,10 @@ if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'beranda_admin') {
     include 'views/pages/admin/naskahDefault_admin.php';
 } else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'editNaskah_admin') {
     include 'views/pages/admin/editNaskah_admin.php';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'kategori_admin') {
+    include 'views/pages/admin/kategori_admin.php';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'cu_admin') {
+    include 'views/pages/admin/cu_admin.php';
 } else {
     include 'views/pages/admin/beranda_admin.php';
 }
