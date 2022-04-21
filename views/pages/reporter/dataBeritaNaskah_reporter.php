@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'app/controller/reporter/post_naskah.php';
 // include 'app/controller/reporter/post_naskahghi.php';
 ?>
@@ -53,13 +53,13 @@ include 'app/controller/reporter/post_naskah.php';
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <?php tampil_naskah_ghi($mysqli); ?>
+                                            <?php tampil_naskah_ghi($mysqli); ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="tabel-naskah-gns" role="tabpanel" aria-labelledby="tabel-naskah-gns-tab">
                                     <table id="dataTable2" class="table ">
-                                    <thead class="thead-light">
+                                        <thead class="thead-light">
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
@@ -72,114 +72,31 @@ include 'app/controller/reporter/post_naskah.php';
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <?php tampil_naskah_gns($mysqli); ?>
+                                            <?php tampil_naskah_gns($mysqli); ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="tabel-naskah-sulampa" role="tabpanel" aria-labelledby="tabel-naskah-sulampa-tab">
-                                    <table id="example3" class="table table-bordered table-striped">
+                                    <table id="dataTable3" class="table">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>NO KK</th>
-                                                <th>NIK</th>
-                                                <th>Kepala Keluarga</th>
-                                                <th>Tgl Lahir</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Penghasilan</th>
-                                                <th>Dusun</th>
+                                                <th>Judul</th>
+                                                <th>Petugas</th>
+                                                <th>Tanggal</th>
+                                                <th>Lokasi</th>
+                                                <th>Sumber</th>
+                                                <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>7503061001170005</td>
-                                                <td>1302100901880001</td>
-                                                <td>ARIF FAREZA</td>
-                                                <td>09 Januari 1988</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Bolongga</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="1302100901880001">
-                                                        <button type="submit" name="update_bst" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke Bantuan Sosial Tunai (BST) ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>7503061406120004</td>
-                                                <td>750306251187002</td>
-                                                <td>ABD RAHMAN MOKO</td>
-                                                <td>25 November 1987</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Pentadio</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="750306251187002">
-                                                        <button type="submit" name="update_bst" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke Bantuan Sosial Tunai (BST) ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
+                                            <?php tampil_naskah_sulampa($mysqli); ?>
                                         </tbody>
                                     </table>
                                 </div>
                                 <div class="tab-pane fade" id="tabel-naskah-lipuu" role="tabpanel" aria-labelledby="tabel-naskah-lipuu-tab">
-                                    <table id="example4" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>NO KK</th>
-                                                <th>NIK</th>
-                                                <th>Kepala Keluarga</th>
-                                                <th>Tgl Lahir</th>
-                                                <th>Jenis Kelamin</th>
-                                                <th>Penghasilan</th>
-                                                <th>Dusun</th>
-                                                <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>7503061001170005</td>
-                                                <td>1302100901880001</td>
-                                                <td>ARIF FAREZA</td>
-                                                <td>09 Januari 1988</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Bolongga</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="1302100901880001">
-                                                        <button type="submit" name="update_blt" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke BLT-Dana Desa ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>7503061406120004</td>
-                                                <td>750306251187002</td>
-                                                <td>ABD RAHMAN MOKO</td>
-                                                <td>25 November 1987</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Pentadio</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="750306251187002">
-                                                        <button type="submit" name="update_blt" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke BLT-Dana Desa ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-pane fade" id="tabel-naskah-lc" role="tabpanel" aria-labelledby="tabel-naskah-lc-tab">
-                                    <table id="example4" class="table table-bordered table-striped">
+                                    <table id="dataTable4" class="table">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -193,38 +110,26 @@ include 'app/controller/reporter/post_naskah.php';
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php tampil_naskah_lipuu($mysqli); ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tabel-naskah-lc" role="tabpanel" aria-labelledby="tabel-naskah-lc-tab">
+                                    <table id="dataTable5" class="table">
+                                        <thead>
                                             <tr>
-                                                <td>1</td>
-                                                <td>7503061001170005</td>
-                                                <td>1302100901880001</td>
-                                                <td>ARIF FAREZA</td>
-                                                <td>09 Januari 1988</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Bolongga</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="1302100901880001">
-                                                        <button type="submit" name="update_blt" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke BLT-Dana Desa ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
+                                                <th>No</th>
+                                                <th>Judul</th>
+                                                <th>Petugas</th>
+                                                <th>Tanggal</th>
+                                                <th>Lokasi</th>
+                                                <th>Kategori</th>
+                                                <th>Status</th>
+                                                <th>Aksi</th>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>7503061406120004</td>
-                                                <td>750306251187002</td>
-                                                <td>ABD RAHMAN MOKO</td>
-                                                <td>25 November 1987</td>
-                                                <td>Laki Laki</td>
-                                                <td>Rp. 500,000</td>
-                                                <td>Pentadio</td>
-                                                <td>
-                                                    <form action="" method="POST">
-                                                        <input type="hidden" name="nik" value="750306251187002">
-                                                        <button type="submit" name="update_blt" class="btn btn-primary btn-xs" onclick="return confirm('Yakin menambahkan data ini ke BLT-Dana Desa ?')"><i class="fas fa-plus"></i> Tambah Bantuan</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
+                                        </thead>
+                                        <tbody>
+
                                         </tbody>
                                     </table>
                                 </div>

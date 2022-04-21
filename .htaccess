@@ -67,6 +67,7 @@ RewriteRule ^naskahDefault_admin$ admin.php?t_admin=naskahDefault_admin
 RewriteRule ^editNaskah_admin$ admin.php?t_admin=editNaskah_admin
 RewriteRule ^kategori_admin$ admin.php?t_admin=kategori_admin
 RewriteRule ^cu_admin$ admin.php?t_admin=cu_admin
+RewriteRule ^sumber_admin$ admin.php?t_admin=sumber_admin
 
 
 <IfModule mod_headers.c>

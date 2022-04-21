@@ -1,5 +1,7 @@
+<?php
+include 'app/controller/reporter/post_naskahlipuu.php';
+?>
 <div class="content-wrapper">
-
     <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
@@ -7,29 +9,33 @@
                 <i class="fas fa-eye fa-md  mr-2"></i>
                 Lihat Refrensi Naskah
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- general form elements disabled -->
-                    <div class="card card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">NASKAH HABARI</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <form role="form">
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- general form elements disabled -->
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">NASKAH HABARI</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <!-- text input -->
                                         <div class="form-group">
+                                            <input type="hidden" name="jenis" value="lipuu">
+                                            <input type="hidden" name="sts_periksa" value="0">
+                                            <input type="hidden" name="sts_edit" value="0">
                                             <label>Judul</label>
-                                            <input type="text" class="form-control" placeholder="Masukkan Judul Berita">
+                                            <input name="judul" type="text" class="form-control" placeholder="Masukkan Judul Berita">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <!-- text input -->
                                         <div class="form-group">
                                             <label>Lokasi</label>
-                                            <input type="text" class="form-control" placeholder="Masukkan Lokasi Berita">
+                                            <input name="lokasi" type="text" class="form-control" placeholder="Masukkan Lokasi Berita">
                                         </div>
                                     </div>
                                 </div>
@@ -38,17 +44,12 @@
                                         <!-- text input -->
                                         <div class="form-group">
                                             <label>Kameramen</label>
-                                            <input type="text" class="form-control" placeholder="Masukkan Kameramen Berita">
+                                            <input name="kameramen" type="text" class="form-control" placeholder="Masukkan Kameramen Berita">
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label>Tanggal Berita</label>
-                                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" placeholder="Masukkan Tanggal Berita" />
-                                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                            </div>
-                                        </div>
+                                        <input name="tgl_berita" type="date" class="form-control datetimepicker-input" data-target="#reservationdate" placeholder="Masukkan Tanggal Berita" />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -56,12 +57,16 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <label>Kategori Berita</label>
-                                            <select class="form-control">
-                                                <option selected="" disabled="">--Pilih Kategori--</option>
-                                                <option>Kesehatan</option>
-                                                <option>Ekonomi</option>
-                                                <option>Sosial</option>
-                                                <option>Hukum</option>
+                                            <select class="form-control" name="kategori">
+                                                <option hidden>--Pilih Kategori--</option>
+                                                <?php
+                                                $query = $mysqli->query("SELECT * FROM kategori");
+                                                while ($data = $query->fetch_assoc()) {
+                                                ?>
+                                                    <option value="<?= $data['id_kategori'] ?>"><?= $data['nama_kategori'] ?></option>
+                                                <?php
+                                                }
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -69,57 +74,31 @@
                                         <!-- select -->
                                         <div class="form-group">
                                             <label>Bobot Berita</label>
-                                            <select class="form-control">
-                                                <option selected="" disabled="">--Masukkan Bobot Berita--</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
+                                            <select class="form-control" name="bobot">
+                                                <option hidden>--Masukkan Bobot Berita--</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-
-                            </form>
+                            </div>
                         </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-
-                    <!-- general form elements disabled -->
-                    <div class="card card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">ISI BERITA</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <form role="form">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">ISI BERITA</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <!-- textarea -->
                                         <div class="form-group">
                                             <label>Lead Berita</label>
-                                            <textarea class="form-control" rows="3" placeholder="Masukkan Lead Berita"></textarea>
+                                            <textarea name="lead" class="form-control" rows="10" placeholder="Masukkan Lead Berita"></textarea>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="btn-group  mb-5">
-                                            <button type="button" class="btn btn-warning">Tambah Item</button>
-                                            <button type="button" class="btn btn-warning dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                                                <span class="sr-only">Toggle Dropdown</span>
-                                                <div class="dropdown-menu" role="menu">
-                                                    <a class="dropdown-item" href="#">Sound Up</a>
-                                                    <a class="dropdown-item" href="#">PKG</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Separated link</a>
-                                                </div>
-                                            </button>
-                                        </div>
-
                                     </div>
                                 </div>
 
@@ -128,47 +107,43 @@
                                         <!-- textarea -->
                                         <div class="form-group">
                                             <label>Narasi Berita</label>
-                                            <textarea class="form-control" rows="3" placeholder="Masukkan Narasi Berita"></textarea>
+                                            <textarea name="narasi" class="form-control" rows="10" placeholder="Masukkan Narasi Berita"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <div class="form-group">
+                                </div>
+                                <div class="after-add-more mb-2">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-warning text-white add-more"><i class="fas fa-plus-circle"></i> Soundup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="copy" style="display: none;">
+                                    <div class="control-group">
+                                        <div class="row mb-2">
+                                            <div class="col-8">
                                                 <label>Sound Up</label>
-                                                <input type="text" class="form-control" placeholder="Masukkan Nama Yang Di Wawancara">
+                                                <input type="text" name="su[]" placeholder="Masukan Soundup" class="form-control">
+                                            </div>
+                                            <div class="col-12 mt-2">
+                                                <label>Narasi</label>
+                                                <textarea class="form-control" rows="10" name="narasi_soundup[]"></textarea>
                                             </div>
                                         </div>
-                                    </div>
-
-
-
-                                    <div class="btn btn-group mb-2 mt-4">
-                                        <button type="button" class="btn btn-danger">Hapus SoundUp</button>
-                                    </div>
-                                    <div class="btn btn-group mb-2 mt-4">
-                                        <button type="button" class="btn btn-info">Tambah Narasi</button>
+                                        <button type="button" class="btn btn-danger remove"><i class="fas fa-trash"></i> SoundUp</button>
+                                        <hr>
                                     </div>
                                 </div>
-
-
                                 <div class="btn-group float-right">
-                                    <button type="button" class="btn btn-success">Simpan</button>
+                                    <button type="submit" name="simpanlipuu" class="btn btn-success">Simpan</button>
                                 </div>
-
-
-
-
-
-
-
-
-                            </form>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <!-- /.card-body -->
+                        <!-- /.card -->
                     </div>
-                    <!-- /.card -->
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 </div>

@@ -1,15 +1,16 @@
 <?php
 
-include 'app/controller/reporter/function_naskahgns.php';
+include 'app/controller/reporter/function_naskahsulampa.php';
 include 'app/flash_message.php';
 
-if (isset($_POST['simpangns'])) {
+if (isset($_POST['simpansulampa'])) {
     $judul = $_POST['judul'];
     $lokasi = $_POST['lokasi'];
     $kameramen = $_POST['kameramen'];
     $tgl_berita = $_POST['tgl_berita'];
     $kategori = $_POST['kategori'];
     $bobot = $_POST['bobot'];
+
     $lead = $_POST['lead'];
     $narasi = $_POST['narasi'];
     $su = $_POST['su'];

@@ -1,6 +1,6 @@
 <footer class="main-footer">
 
-    <strong>Copyright &copy; <?= date('Y') ?> </strong> - <i class="fas fa-code"></i> With <i class="fas fa-coffee"></i> & <i class="fas fa-heart"></i> By Abid Amir
+  <strong>Copyright &copy; <?= date('Y') ?> </strong> - <i class="fas fa-code"></i> With <i class="fas fa-coffee"></i> & <i class="fas fa-heart"></i> By Abid Amir
 </footer>
 
 <!-- Control Sidebar -->
@@ -34,44 +34,42 @@
 <script src="<?= $base_url ?>public/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script src="<?= $base_url ?>public/assets/plugins/summernote/summernote-bs4.min.js"></script>
 <script>
-    // $(function() {
-    //     // Summernote
-    //     $('#summernote_lead').summernote({
-    //         height: 200
-    //     })
-    //     $('#summernote_narasi').summernote({
-    //         height: 200
-    //     })
-    //     $('#summernote_narasi_su').summernote({
-    //         height: 200
-    //     })
+  // $(function() {
+  //     // Summernote
+  //     $('#summernote_lead').summernote({
+  //         height: 200
+  //     })
+  //     $('#summernote_narasi').summernote({
+  //         height: 200
+  //     })
+  //     $('#summernote_narasi_su').summernote({
+  //         height: 200
+  //     })
 
-    // })
+  // })
 </script>
 
 <script type="text/javascript">
-   $(function() {
-        // Summernote
-        $('#summernote_naskah_default').summernote({
-            height: 200
-        })
-        $('#summernote_naskah_default_edit').summernote({
-            height: 200
-        })
-      })
-    $(document).ready(function() {
-        $(".add-more").click(function() {
-            var html = $(".copy").html();
-            $(".after-add-more").after(html);
-        });
-
-
-        $("body").on("click", ".remove", function() {
-            $(this).parents(".control-group").remove();
-        });
+  $(function() {
+    // Summernote
+    $('#summernote_naskah_default').summernote({
+      height: 200
+    })
+    $('#summernote_naskah_default_edit').summernote({
+      height: 200
+    })
+  })
+  $(document).ready(function() {
+    $(".add-more").click(function() {
+      var html = $(".copy").html();
+      $(".after-add-more").after(html);
     });
 
-    
+
+    $("body").on("click", ".remove", function() {
+      $(this).parents(".control-group").remove();
+    });
+  });
 </script>
 <script>
   $(document).ready(function() {
@@ -96,6 +94,13 @@
     $('#dataTable3').DataTable();
   });
 
+  $(document).ready(function() {
+    $('#dataTable4').DataTable();
+  });
+
+  $(document).ready(function() {
+    $('#dataTable5').DataTable();
+  });
 </script>
 
 
