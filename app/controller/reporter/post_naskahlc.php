@@ -1,9 +1,9 @@
 <?php
 
-include 'app/controller/reporter/function_naskahghi.php';
+include 'app/controller/reporter/function_naskahlc.php';
 include 'app/flash_message.php';
 
-if (isset($_POST['simpanghi'])) {
+if (isset($_POST['simpanlc'])) {
     $judul = $_POST['judul'];
     $lokasi = $_POST['lokasi'];
     $kameramen = $_POST['kameramen'];

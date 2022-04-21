@@ -60,12 +60,12 @@ include 'app/controller/reporter/post_naskahghi.php';
                                             <select class="form-control" name="kategori">
                                                 <option hidden>--Pilih Kategori--</option>
                                                 <?php
-                                                    $query = $mysqli->query("SELECT * FROM kategori");
-                                                    while ($data = $query->fetch_assoc()){
-                                                        ?>
-                                                            <option value="<?= $data['id_kategori']?>"><?= $data['nama_kategori']?></option>
-                                                        <?php
-                                                    }
+                                                $query = $mysqli->query("SELECT * FROM kategori");
+                                                while ($data = $query->fetch_assoc()) {
+                                                ?>
+                                                    <option value="<?= $data['id_kategori'] ?>"><?= $data['nama_kategori'] ?></option>
+                                                <?php
+                                                }
                                                 ?>
                                             </select>
                                         </div>

@@ -44,7 +44,7 @@ include 'app/controller/reporter/post_naskah.php';
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
-                                                <th>Petugas</th>
+                                                <th>Kameramen</th>
                                                 <th>Tanggal</th>
                                                 <th>Lokasi</th>
                                                 <th>Kategori</th>
@@ -63,7 +63,7 @@ include 'app/controller/reporter/post_naskah.php';
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
-                                                <th>Petugas</th>
+                                                <th>Kameramen</th>
                                                 <th>Tanggal</th>
                                                 <th>Lokasi</th>
                                                 <th>Kategori</th>
@@ -82,7 +82,7 @@ include 'app/controller/reporter/post_naskah.php';
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
-                                                <th>Petugas</th>
+                                                <th>Kameramen</th>
                                                 <th>Tanggal</th>
                                                 <th>Lokasi</th>
                                                 <th>Sumber</th>
@@ -101,7 +101,7 @@ include 'app/controller/reporter/post_naskah.php';
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
-                                                <th>Petugas</th>
+                                                <th>Kameramen</th>
                                                 <th>Tanggal</th>
                                                 <th>Lokasi</th>
                                                 <th>Kategori</th>
@@ -120,16 +120,15 @@ include 'app/controller/reporter/post_naskah.php';
                                             <tr>
                                                 <th>No</th>
                                                 <th>Judul</th>
-                                                <th>Petugas</th>
+                                                <th>Kameramen</th>
                                                 <th>Tanggal</th>
                                                 <th>Lokasi</th>
                                                 <th>Kategori</th>
-                                                <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-
+                                            <?php tampil_naskah_lc($mysqli); ?>
                                         </tbody>
                                     </table>
                                 </div>

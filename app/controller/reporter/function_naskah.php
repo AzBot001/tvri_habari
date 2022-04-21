@@ -188,6 +188,29 @@ function tampil_naskah_sulampa($mysqli)
                 <button class="btn btn-danger btn-xs"><i class="fas fa-trash"></i></button>
             </td>
         </tr>
+    <?php
+    }
+}
+
+function tampil_naskah_lc($mysqli)
+{
+    $nomor = 1;
+    $query = $mysqli->query("SELECT * FROM kategori JOIN naskah ON kategori.id_kategori = naskah.id_kategori WHERE jenis = 'lc' ");
+    while ($data = $query->fetch_assoc()) {
+    ?>
+        <tr>
+            <td><?= $nomor++ ?></td>
+            <td><?= $data['judul'] ?></td>
+            <td><?= $data['kameramen'] ?></td>
+            <td><?= tgl_indo($data['tgl_berita']) ?></td>
+            <td><?= $data['lokasi'] ?></td>
+            <td><?= $data['nama_kategori'] ?></td>
+            <td>
+                <button class="btn btn-success btn-xs"><i class="fas fa-print"></i></button>
+                <button class="btn btn-warning text-white btn-xs"><i class="fas fa-edit"></i></button>
+                <button class="btn btn-danger btn-xs"><i class="fas fa-trash"></i></button>
+            </td>
+        </tr>
 <?php
     }
 }
