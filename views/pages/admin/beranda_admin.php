@@ -13,7 +13,13 @@
                     <!-- small box -->
                     <div class="small-box bg-biru">
                         <div class="inner">
-                            <h3>15</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $sql_beritaharini = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date'");
+                                echo mysqli_num_rows($sql_beritaharini);
+                                ?>
+                            </h3>
 
                             <p>Jumlah Berita Hari Ini</p>
                         </div>
@@ -39,7 +45,13 @@
                     <!-- small box -->
                     <div class="small-box bg-coklat">
                         <div class="inner">
-                            <h3>10</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $n_default = $mysqli->query("SELECT * FROM naskah_default");
+                                echo mysqli_num_rows($n_default);
+                                ?>
+                            </h3>
 
                             <p>Jumlah Naskah Default</p>
                         </div>

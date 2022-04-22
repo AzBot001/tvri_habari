@@ -48,8 +48,8 @@
                             <h3>
                                 <?php
                                 $date = date('Y-m-d');
-                                $sql_sulampaharini = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND jenis = 'sulampa' ");
-                                echo mysqli_num_rows($sql_sulampaharini);
+                                $slmp = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND jenis = 'sulampa' ");
+                                echo mysqli_num_rows($slmp);
                                 ?>
                             </h3>
 

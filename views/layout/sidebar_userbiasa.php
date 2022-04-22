@@ -35,7 +35,7 @@
                       </a>
                   </li>
                   <li class="nav-item has-treeview">
-                      <a href="<?= $base_url ?>dataBeritaNaskah_userbiasa" class="nav-link">
+                      <a href="<?= $base_url ?>dataBeritaNaskah" class="nav-link">
                           <i class="nav-icon fas fa-newspaper"></i>
                           <p>
                               Data Berita
@@ -44,19 +44,19 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="<?= $base_url ?>dataBeritaNaskah_userbiasa" class="nav-link">
+                              <a href="<?= $base_url ?>dataBeritaNaskah" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Data Naskah</p>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="<?= $base_url ?>dataBeritaRundown_userbiasa" class="nav-link">
+                              <a href="<?= $base_url ?>dataBeritaRundown" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Data Rundown</p>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="<?= $base_url ?>dataBeritaLead_userbiasa" class="nav-link">
+                              <a href="<?= $base_url ?>dataBeritaLead" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Data Lead</p>
                               </a>

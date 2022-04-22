@@ -12,10 +12,21 @@
                 <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-biru">
-                        <div class="inner">
-                            <h3>15</h3>
+                        <div class="small-box bg-biru">
+                            <div class="inner">
+                                <h3>
+                                    <?php
+                                    $date = date('Y-m-d');
+                                    $sql_beritaharini = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date'");
+                                    echo mysqli_num_rows($sql_beritaharini);
+                                    ?>
+                                </h3>
 
-                            <p>Jumlah Berita Hari Ini</p>
+                                <p>Jumlah Berita Hari Ini</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
                         </div>
                         <div class="icon">
                             <i class="fas fa-newspaper"></i>
@@ -26,8 +37,13 @@
                     <!-- small box -->
                     <div class="small-box bg-kuning">
                         <div class="inner">
-                            <h3>10</h3>
-
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $edit = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND sts_edit = '0' ");
+                                echo mysqli_num_rows($edit);
+                                ?>
+                            </h3>
                             <p>Jumlah Berita Yang Belum Di Edit Hari Ini</p>
                         </div>
                         <div class="icon">
@@ -39,7 +55,13 @@
                     <!-- small box -->
                     <div class="small-box bg-coklat">
                         <div class="inner">
-                            <h3>10</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $slmp = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND jenis = 'sulampa' ");
+                                echo mysqli_num_rows($slmp);
+                                ?>
+                            </h3>
 
                             <p>Jumlah Sulampa Hari Ini</p>
                         </div>

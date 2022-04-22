@@ -13,7 +13,13 @@
                     <!-- small box -->
                     <div class="small-box bg-biru">
                         <div class="inner">
-                            <h3>15</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $sql_beritaharini = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date'");
+                                echo mysqli_num_rows($sql_beritaharini);
+                                ?>
+                            </h3>
 
                             <p>Jumlah Berita Hari Ini</p>
                         </div>
@@ -26,9 +32,15 @@
                     <!-- small box -->
                     <div class="small-box bg-kuning">
                         <div class="inner">
-                            <h3>10</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $edit = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND sts_edit = '1' ");
+                                echo mysqli_num_rows($edit);
+                                ?>
+                            </h3>
 
-                            <p>Jumlah Editan Hari Ini</p>
+                            <p>Jumlah Berita Yang Sudah Diedit</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-newspaper"></i>
@@ -39,7 +51,13 @@
                     <!-- small box -->
                     <div class="small-box bg-coklat">
                         <div class="inner">
-                            <h3>10</h3>
+                            <h3>
+                                <?php
+                                $date = date('Y-m-d');
+                                $slmp = $mysqli->query("SELECT * FROM naskah WHERE tgl_berita = '$date' AND jenis = 'sulampa' ");
+                                echo mysqli_num_rows($slmp);
+                                ?>
+                            </h3>
 
                             <p>Jumlah Sulampa Hari Ini</p>
                         </div>

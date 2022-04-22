@@ -7,13 +7,13 @@ include 'base_url.php';
 if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'beranda_admin') {
     $title = 'Beranda';
     $icon = 'fas fa-dashboard';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaNaskah_admin') {
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaNaskah') {
     $title = 'Data Naskah';
     $icon = 'fas fa-edit';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaRundown_admin') {
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaRundown') {
     $title = 'Data Rundown';
     $icon = 'fas fa-edit';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaLead_admin') {
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaLead') {
     $title = 'Data Lead';
     $icon = 'fas fa-edit';
 } else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'formatTimredaksi_admin') {
@@ -43,12 +43,12 @@ include 'views/layout/sidebar_admin.php';
 
 if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'beranda_admin') {
     include 'views/pages/admin/beranda_admin.php';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaNaskah_admin') {
-    include 'views/pages/admin/dataBeritaNaskah_admin.php';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaRundown_admin') {
-    include 'views/pages/admin/dataBeritaRundown_admin.php';
-} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaLead_admin') {
-    include 'views/pages/admin/dataBeritaLead_admin.php';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaNaskah') {
+    include 'views/pages/dataBeritaNaskah.php';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaRundown') {
+    include 'views/pages/dataBeritaRundown.php';
+} else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'dataBeritaLead') {
+    include 'views/pages/dataBeritaLead.php';
 } else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'verivikasiUser_admin') {
     include 'views/pages/admin/verivikasiUser_admin.php';
 } else if (isset($_GET['t_admin']) && $_GET['t_admin'] == 'formatTimredaksi_admin') {
